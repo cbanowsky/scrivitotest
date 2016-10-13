@@ -1,14 +1,16 @@
 <html>
   <head>
     <title>Scrivito Application</title>
-    …
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= csrf_meta_tags %>
     <%= scrivito_head_tags %>
-    …
   </head>
   <body>
+   <div class="container">
     <%= yield %>
-    …
+   </div>
     <%= scrivito_body_tags %>
-    …
+    <%= javascript_include_tag 'application' %>
+
   </body>
 </html>
